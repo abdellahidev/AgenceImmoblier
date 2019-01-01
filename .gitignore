@@ -5,6 +5,8 @@
 /public/bundles/
 /var/
 /vendor/
+/public/images
+public/media
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
@@ -16,3 +18,7 @@
 /.web-server-pid
 ###< symfony/web-server-bundle ###
 .idea/
+
+###> liip/imagine-bundle ###
+/public/media/cache/
+###< liip/imagine-bundle ###

@@ -9,6 +9,8 @@
 namespace App\Entity;
 
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 class PropertySearch
 {
     /**
@@ -20,6 +22,16 @@ class PropertySearch
      * @var int|null
      */
     private $minSurface;
+
+    /**
+     * @var ArrayCollection
+     */
+    private $lindicaps;
+
+    public function __construct()
+    {
+        $this->lindicaps= new ArrayCollection();
+    }
 
     /**
      * @return int|null
@@ -56,6 +68,25 @@ class PropertySearch
         $this->minSurface = $minSurface;
         return $this;
     }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getLindicaps(): ArrayCollection
+    {
+        return $this->lindicaps;
+    }
+
+    /**
+     * @param ArrayCollection $lindicaps
+     */
+    public function setLindicaps(ArrayCollection $lindicaps): void
+    {
+        $this->lindicaps = $lindicaps;
+    }
+
+
+
 
 
 }

@@ -2,8 +2,10 @@
 
 namespace App\Form;
 
+use App\Entity\Lindicap;
 use App\Entity\PropertySearch;
 use phpDocumentor\Reflection\Types\Integer;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -25,7 +27,9 @@ class PropertySearchType extends AbstractType
                 'attr'=>['placeholder'=>'Surface Minimale']
             ])
 
-
+            ->add('lindicaps',EntityType::class, ['class'=>Lindicap::class,
+                'choice_label'=>'name',
+                'multiple'=>true])
         ;
     }
 

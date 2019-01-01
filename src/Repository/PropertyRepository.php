@@ -42,7 +42,13 @@ class PropertyRepository extends ServiceEntityRepository
                ->andwhere('p.surface >= :minsurface')
                ->setParameter('minsurface', $search->getMinSurface());
        }
-
+       /* if($search->getLindicaps()->count() >= 0){
+            foreach ($search->getLindicaps() as $k => $lindicap){
+                $query=$query
+                    ->andWhere(":lindicap $k MEMBER OF p.lindicaps");
+                    >setParameter("lindicap $k", "$lindicap");
+            }
+        }*/
           return $query->getQuery();
 
    }
