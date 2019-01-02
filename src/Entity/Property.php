@@ -12,12 +12,11 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-//use Vich\UploaderBundle\Entity\File;
+
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 
 
-use phpDocumentor\Reflection\Types\Self_;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PropertyRepository")

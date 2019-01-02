@@ -21,4 +21,5 @@ public/media
 
 ###> liip/imagine-bundle ###
 /public/media/cache/
+npm-debug.log
 ###< liip/imagine-bundle ###
